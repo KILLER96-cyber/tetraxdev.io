@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>TETRAX Policy</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000000;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 10;
+            position: relative;
+        }
+
+        .nav a {
+            color: 	#FFFFFF;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #2020C3;
+            text-shadow: 0 0 5px ##2020C3;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            z-index: 10;
+            position: relative;
+        }
+
+        h1 {
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+            color: ##2020C3;
+            text-shadow: 0 0 8px ##2020C3;
+        }
+
+        h2 {
+            color: #2020C3;
+            margin-top: 30px;
+            text-shadow: 0 0 5px ##2020C3;
+        }
+
+        .section {
+            background-color: rgba(10, 42, 102, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        p {
+            animation: fadeIn 1.2s ease-out;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .discord-button {
+            display: block;
+            width: 200px;
+            margin: 30px auto 0;
+            padding: 12px 20px;
+            background-color: #2020C3;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .discord-button:hover {
+            background-color: #2020C3;
+            box-shadow: 0 0 10px #2020C3;
+        }
+
+        .toc {
+            text-align: center;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 15px;
+            border-radius: 10px;
+            z-index: 9;
+        }
+
+        .toc a {
+            margin: 0 10px;
+            color: #2020C3;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+            color: #2020C3;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        canvas#starfield {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background: transparent;
+        }
+
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: transparent url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/stars.png') repeat top center;
+            animation: scrollStars 100s linear infinite;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        @keyframes scrollStars {
+            from { background-position: 0 0; }
+            to { background-position: 0 10000px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+
+    <div class="nav">
+        <a href="index.html">TETRAX</a>
+        <a href="Scripts.html">Scripts</a>
+        <a href="Policy.html">Policy</a>
+    </div>
+
+    <div class="container">
+        <h1>🛡️ TETRAX Policy</h1>
+
+        <div class="toc">
+            <a href="#key">Key System</a>
+            <a href="#redistribution">Redistribution</a>
+            <a href="#support">Support</a>
+            <a href="#security">Security</a>
+            <a href="#refund">Refund</a>
+            <a href="#discord">Discord Rules</a>
+            <a href="#changes">Policy Updates</a>
+        </div>
+
+        <div class="section">
+            <p>By using any of TETRAX’s scripts, tools, or services, you agree to the following terms and conditions.</p>
+
+            <h2 id="key">1. 🔑 Key System Usage</h2>
+            <p>All our scripts may require a key system. Keys must be obtained through our official sources. Sharing, selling, or bypassing the key system is strictly prohibited and may result in bans or access revocation.</p>
+
+            <h2 id="redistribution">2. 🔁 Redistribution</h2>
+            <p>You are not allowed to redistribute, resell, or modify our scripts without permission. Violating this can lead to blacklisting or legal action if applicable.</p>
+
+            <h2 id="support">3. 🔧 Support and Updates</h2>
+            <p>Free version users receive limited support. Premium users get priority updates, faster responses, and exclusive features. We reserve the right to change features or discontinue support at any time.</p>
+
+            <h2 id="security">4. 🔒 Security and Fair Use</h2>
+            <p>Any malicious use of our scripts (exploiting servers, harming gameplay, etc.) is strictly forbidden. We reserve the right to blacklist users caught using scripts irresponsibly.</p>
+
+            <h2 id="refund">5. 💸 Refund Policy</h2>
+            <p>Due to the digital nature of our products, we do not offer refunds. Please try the free version first before purchasing the premium version.</p>
+
+            <h2 id="discord">6. 💬 Discord Server Rules</h2>
+            <p>Our Discord community must be respected. Harassment, spam, or rule-breaking behavior may result in removal. If you are banned from the server, you also lose access to premium support.</p>
+
+            <h2 id="changes">7. 🔁 Changes to This Policy</h2>
+            <p>We may update this policy at any time. By continuing to use our services, you agree to the latest version of our terms.</p>
+
+            <a href="https://discord.gg/xgVJ9S2E7p" class="discord-button" target="_blank">Join Our Discord</a>
+        </div>
+    </div>
+
+    <canvas id="starfield"></canvas>
+
+    <script>
+    (() => {
+        const canvas = document.getElementById('starfield');
+        const ctx = canvas.getContext('2d');
+        let w, h;
+        let stars = [];
+        let shootingStars = [];
+
+        function resize() {
+            w = window.innerWidth;
+            h = window.innerHeight;
+            canvas.width = w;
+            canvas.height = h;
+        }
+
+        class Star {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * w;
+                this.y = Math.random() * h;
+                this.size = Math.random() * 1.2 + 0.2;
+                this.opacity = Math.random();
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+                ctx.fill();
+            }
+        }
+
+        class ShootingStar {
+            constructor() { this.reset(); }
+            reset() {
+                this.x = Math.random() * w;
+                this.y = 0;
+                this.len = Math.random() * 80 + 10;
+                this.speed = Math.random() * 10 + 6;
+                this.size = Math.random() * 1 + 0.5;
+                this.waitTime = Date.now() + Math.random() * 3000 + 500;
+                this.active = false;
+            }
+            update() {
+                if (!this.active) {
+                    if (Date.now() > this.waitTime) this.active = true;
+                    else return;
+                }
+                this.x += this.speed;
+                this.y += this.speed;
+                if (this.x > w || this.y > h) this.reset();
+            }
+            draw() {
+                if (!this.active) return;
+                ctx.beginPath();
+                ctx.moveTo(this.x, this.y);
+                ctx.lineTo(this.x - this.len, this.y - this.len);
+                ctx.strokeStyle = 'white';
+                ctx.lineWidth = this.size;
+                ctx.stroke();
+            }
+        }
+
+        function init() {
+            stars = [];
+            shootingStars = [];
+            for (let i = 0; i < 100; i++) stars.push(new Star());
+            for (let i = 0; i < 20; i++) shootingStars.push(new ShootingStar());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, w, h);
+            stars.forEach(s => s.draw());
+            shootingStars.forEach(s => {
+                s.update();
+                s.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', () => {
+            resize();
+            init();
+        });
+
+        resize();
+        init();
+        animate();
+    })();
+    </script>
+</body>
+</html>

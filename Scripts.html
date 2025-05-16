@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>TETRAX Scripts</title>
+    <style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000000;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Starry Background with ~100 stars using box-shadow */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: #000;
+            pointer-events: none;
+            z-index: -2;
+            box-shadow:
+                10vw 15vh white,
+                15vw 30vh white,
+                20vw 10vh white,
+                25vw 50vh white,
+                30vw 20vh white,
+                35vw 60vh white,
+                40vw 25vh white,
+                45vw 55vh white,
+                50vw 15vh white,
+                55vw 45vh white,
+                60vw 10vh white,
+                65vw 65vh white,
+                70vw 20vh white,
+                75vw 50vh white,
+                80vw 25vh white,
+                85vw 55vh white,
+                90vw 15vh white,
+                95vw 45vh white,
+                5vw 70vh white,
+                12vw 75vh white,
+                /* Add many more to reach ~100 stars */
+                10vw 80vh white,
+                18vw 85vh white,
+                23vw 90vh white,
+                28vw 95vh white,
+                33vw 85vh white,
+                38vw 80vh white,
+                43vw 90vh white,
+                48vw 85vh white,
+                53vw 95vh white,
+                58vw 90vh white,
+                63vw 85vh white,
+                68vw 80vh white,
+                73vw 90vh white,
+                78vw 85vh white,
+                83vw 95vh white,
+                88vw 90vh white,
+                93vw 85vh white,
+                98vw 80vh white;
+            background-repeat: no-repeat;
+            animation: twinkle 3s infinite alternate ease-in-out;
+        }
+
+        /* Shooting Stars Container */
+        .shooting-stars {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            overflow: visible;
+            z-index: -1;
+        }
+
+        /* Shooting Star style */
+        .shooting-star {
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(-45deg, white, rgba(255,255,255,0));
+            border-radius: 50%;
+            opacity: 0;
+            transform: translateX(0) translateY(0) rotate(45deg);
+            animation: shooting-star-animation 3s ease-in-out forwards;
+        }
+
+        /* Animations */
+        @keyframes twinkle {
+            from {opacity: 0.7;}
+            to {opacity: 1;}
+        }
+
+        @keyframes shooting-star-animation {
+            0% {
+                opacity: 1;
+                transform: translateX(0) translateY(0) rotate(45deg);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(500px) translateY(300px) rotate(45deg);
+            }
+        }
+
+        /* Navigation */
+        .nav {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: relative;
+            z-index: 10;
+        }
+
+        .nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 16px;
+        }
+
+        .nav a:hover {
+            color: #00ffff;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1, h2 {
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        p {
+            text-align: center;
+            margin: 15px 0;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .section {
+            background-color: rgba(32, 32, 195, 0.2);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 10px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        a.button {
+            display: inline-block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: #2020C3;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        a.button:hover {
+            background-color: #3c3cff;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            border: none;
+            border-radius: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">TETRAX</a>
+        <a href="Scripts.html">Scripts</a>
+        <a href="Policy.html">Policy</a>
+    </div>
+
+    <div class="container">
+        <h1>About TETRAX</h1>
+        <p>TETRAX is built to level up your gameplay like never before.<br>
+        Once you try our scripts, you won’t want to stop — it’s fast, smooth, and seriously fun.</p>
+
+        <div class="section">
+            <h2>🎮 Free Version</h2>
+            <p>No need to download anything directly. Get your key and start playing!</p>
+            <a class="button" href="https://ads.luarmor.net/get_key?for=TeTraX_Product-qYxPytIAebiI">Get Key</a>
+            <p>Need help? Join our Discord or check our tutorial videos for step-by-step setup instructions.</p>
+        </div>
+
+        <div class="section">
+            <h2>💎 Premium Version</h2>
+            <p>Want more features and better performance?<br>Get the premium version by joining our Discord server:</p>
+            <a class="button" href="https://discord.gg/xgVJ9S2E7p">Join Discord</a>
+
+            <iframe width="320" height="180" src="https://www.youtube.com/embed/HqZVwHrD9fk" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Shooting stars container -->
+    <div class="shooting-stars"></div>
+
+    <script>
+        const shootingStarsContainer = document.querySelector('.shooting-stars');
+
+        // Create multiple shooting stars at once (20 stars)
+        function createShootingStar() {
+            const star = document.createElement('div');
+            star.classList.add('shooting-star');
+
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.animationDuration = (2 + Math.random() * 2) + 's'; // random duration 2-4s
+            
+            shootingStarsContainer.appendChild(star);
+
+            star.style.animation = `shooting-star-animation ${star.style.animationDuration} ease-in-out forwards`;
+
+            setTimeout(() => {
+                shootingStarsContainer.removeChild(star);
+            }, parseFloat(star.style.animationDuration) * 1000);
+        }
+
+        // Create 20 shooting stars spaced out randomly
+        for (let i = 0; i < 20; i++) {
+            setTimeout(createShootingStar, i * 800);
+        }
+
+        // After initial 20, keep generating shooting stars randomly every 3-5 seconds
+        function shootingStarsLoop() {
+            createShootingStar();
+            const timeout = Math.random() * 2000 + 3000; // 3s to 5s
+            setTimeout(shootingStarsLoop, timeout);
+        }
+
+        // Start loop after initial burst
+        setTimeout(shootingStarsLoop, 16000);
+    </script>
+</body>
+</html>
